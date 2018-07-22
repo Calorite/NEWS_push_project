@@ -2608,6 +2608,8 @@ this.state = { news:null, pageNum:1, loadedAll:false};
   }
 ```
 
+
+
 ## Preference Model
 - We need a model to represent user's news preference.
 - Possible Dimensions:
@@ -2646,6 +2648,8 @@ If User Clicks a news whoses topic is "Sport"
 
 - Then, we could depend how to show those lists to our user
 
+
+
 ## Click Log Processor - Modify the model by User Clicks
 - Log then analyzing later / Real Time event
 #### Why we need this?
@@ -2681,6 +2685,8 @@ in DB       -----------  DB ------   Recommdndation
 ( Handle click Log event:
  Update preference model )
 ```
+
+
 
 ## Log Processer
 ### Client - Web Server / Client /  NewsCard
@@ -2768,6 +2774,8 @@ def logNewsClickForUser(user_id, news_id):
     message = {'userId': user_id, 'newsId': news_id, 'timestamp': str(datetime.utcnow())}
     cloudAMQP_client.sendMessage(message);
 ```
+
+
 ## Recommendation Service
 ### Click Logger Processor
 ```
@@ -2859,6 +2867,8 @@ classes = [
     "Crime",
 ]
 ```
+
+
 ### Test
 - Create a message
 - Drop userId and make sure the DB is clean
@@ -2901,6 +2911,8 @@ def test_basic():
 if __name__ == "__main__":
     test_basic()
 ```
+
+
 ## Recommendation Service
 - 這部分需要再研究
 
@@ -2993,6 +3005,8 @@ import news_recommendation_service_client
 ```
 
 ***
+
+
 
 # Week 4 
 - Jupyter : On Docker
@@ -3352,10 +3366,3 @@ if __name__ == '__main__':
 ```
 
 ## News Topic Modeling Server
-```
-cp -r week7/ week8
-```
-
-```
-mkdir 
-```
